@@ -1,0 +1,17 @@
+{
+  "name": "hkscan",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:api": "npm --workspace @hkscan/api run dev",
+    "dev:client": "npm --workspace @hkscan/client run dev",
+    "build:api": "npm --workspace @hkscan/api run build",
+    "build:web": "npm --workspace @hkscan/client run build:web",
+    "build": "npm run build:api && npm run build:web",
+    "lint": "npm -ws run lint --if-present",
+    "typecheck": "npm -ws run typecheck --if-present"
+  }
+}
